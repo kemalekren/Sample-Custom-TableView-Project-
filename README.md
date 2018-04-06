@@ -1,6 +1,6 @@
 # Sample-Custom-TableView-Project-
 
-This is the sample Project which is included Xcode Project for the Custom Table View Cells
+This is the sample Project which is included Xcode Project for the Custom Table View Cells. I created this project Xcode 9.3 and Swift 4.1
 
 ## Getting Started
 
