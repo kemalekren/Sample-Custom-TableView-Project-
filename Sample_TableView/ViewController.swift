@@ -34,6 +34,7 @@ class ViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! ProductCell
         let currentLastItem = products[indexPath.row]
         cell.product = currentLastItem
+        cell.selectionStyle = UITableViewCellSelectionStyle.none
         return cell
     }
     

@@ -100,12 +100,11 @@ class ProductCell : UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        addSubview(productImage)
-        addSubview(productNameLabel)
-        addSubview(productDescriptionLabel)
-        addSubview(decreaseButton)
-        addSubview(productQuantity)
-        addSubview(increaseButton)
+        
+        contentView.addSubview(productImage)
+        contentView.addSubview(productNameLabel)
+        contentView.addSubview(productDescriptionLabel)
+
         
         productImage.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: nil, paddingTop: 5, paddingLeft: 5, paddingBottom: 5, paddingRight: 0, width: 90, height: 0, enableInsets: false)
         productNameLabel.anchor(top: topAnchor, left: productImage.rightAnchor, bottom: nil, right: nil, paddingTop: 20, paddingLeft: 10, paddingBottom: 0, paddingRight: 0, width: frame.size.width / 2, height: 0, enableInsets: false)
@@ -116,7 +115,7 @@ class ProductCell : UITableViewCell {
         stackView.distribution = .equalSpacing
         stackView.axis = .horizontal
         stackView.spacing = 5
-        addSubview(stackView)
+        contentView.addSubview(stackView)
         stackView.anchor(top: topAnchor, left: productNameLabel.rightAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 15, paddingLeft: 5, paddingBottom: 15, paddingRight: 10, width: 0, height: 70, enableInsets: false)
         
         increaseButton.addTarget(self, action: #selector(increaseFunc), for: .touchUpInside)
